@@ -1,7 +1,7 @@
 # Simple Ajax Solution [SASO]
 SASO is a MyBB Plugin for [MyBB 1.8.24^](https://github.com/mybb/mybb "MyBB GitHub Repository") that by using AJAX perform various functions that replace tedious refreshing of the browser whilst expecting _New Posts_, _New Alerts_, _New Mentions_, and other implementations.
 
-The solution also features Bootstrap Toasts, that are more modern and informative.
+The solution also features [Bootstrap Toasts](https://getbootstrap.com/docs/4.3/components/toasts/ "Bootstrap Toasts"), that are more modern and informative.
 
 ## Planned Features
 This section describes the features that are planned to be implemented, the section is not a description of the final product nor the goal.
@@ -19,3 +19,10 @@ It is not yet planned which templates or configurations for the toast templates 
 Any notification that has to do with a new post on the same page that a user is accessing, will directly update the page with the new post, as long as it is possible.
 
 When _you_ are on a thread, other than receiving a _notification_ that a new post has been made the post is _automatically added to the page_ so that the user can read the new post without refreshing the page. In case that the amount of _posts_ on a _thread_ reaches the maximum amount for each _page_, the pagination is updated and the notification will include information that new posts can be found on the _next_ page.
+
+_Note: Unless Board Administrator allows for Infinite Entries by AJAX, which will keep adding all new post entries, new post entries will include a small information bar with what page the post actually found on._
+
+### AJAX - Preview Post
+If Board Administrator chooses to, this function can replace the "Preview Post" functionality with a new AJAX based one, that will insert the post as a fake entry on the thread.
+
+_Note: This might become a bit weird due to the fact that as new posts are displayed, your preview entry might be amongst them, but fret not, the preview entry will ALWAYS be shown as the last entry on the page, so that the preview is as live as it can be._
